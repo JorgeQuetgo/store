@@ -24,6 +24,7 @@ async function addProduct(req, res) {
     }
 
     const productStored = await product.save()
+    console.log("hola mundo")
     res.status(201).send({productStored})
   } catch (e) {
       res.status(500).send({message: e.message})
